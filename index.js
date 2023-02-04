@@ -15,7 +15,8 @@ let slider = document.querySelector('.slider');
 let slidePages = document.querySelectorAll('.slidePage');
 let circles = document.querySelectorAll('.circle')
 const testing = document.getElementById('testing')
-slider.addEventListener('scroll', ()=> {
+slider.addEventListener('scroll', (e)=> {
+    e.preventDefault();
     let scrolled = slider.scrollLeft
     if(scrolled === (window.innerWidth*0) ){
         circles[0].style.background = 'hsl(12, 88%, 59%)'
